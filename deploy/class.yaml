@@ -2,6 +2,6 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: helper-nfs-storage
-provisioner: helper.ocpsb/nfs # or choose another name, must match deployment's env PROVISIONER_NAME'
+provisioner: <PROVISIONER NAME> # or choose another name, must match deployment's env PROVISIONER_NAME'
 parameters:
   archiveOnDelete: "false"
