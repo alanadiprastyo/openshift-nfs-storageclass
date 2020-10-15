@@ -27,13 +27,13 @@ spec:
               mountPath: /persistentvolumes
           env:
             - name: PROVISIONER_NAME
-              value: helper.ocpdev/nfs
+              value: <PROVISIONER NAME>
             - name: NFS_SERVER
-              value: 192.168.1.10
+              value: <IP OR HOSTNAME NFS SERVER>
             - name: NFS_PATH
-              value: /ocp-nfs
+              value: <NFS EXPORTS DIRECTORY PATH>
       volumes:
         - name: nfs-client-root
           nfs:
-            server: 192.168.1.10
-            path: /ocp-nfs
+            server: <IP OR HOSTNAME NFS SERVER>
+            path: <NFS EXPORTS DIRECTORY PATH>
